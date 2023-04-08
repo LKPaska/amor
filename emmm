@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body {
+  background-color: lavender;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: pink;
+  font-size: 48px;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: pink;
+  color: white;
+  font-size: 24px;
+}
+
+.heart {
+  color: red;
+}
+</style>
+</head>
+<body>
+<h1>You are <span class="heart">❤</span> <span id="adjective">lovely</span> <span class="heart">❤</span></h1>
+<button onclick="getAdjective()">Talk with the unknown.</button>
+<script>
+// A list of wholesome adjectives
+var adjectives = ["amazing", "awesome", "beautiful", "brave", "charming", "cheerful", "creative", "cute", "friendly", "funny", "generous", "gentle", "graceful", "happy", "kind", "lovely", "smart", "sweet", "talented", "wonderful"];
+
+// A function to get a random adjective from the list
+function getAdjective() {
+  // Get a random index from 0 to the length of the list
+  var index = Math.floor(Math.random() * adjectives.length);
+  // Get the adjective at that index
+  var adjective = adjectives[index];
+  // Get the element with id="adjective"
+  var element = document.getElementById("adjective");
+  // Set its text content to the adjective
+  element.textContent = adjective;
+}
+</script>
+</body>
+</html>
+```
